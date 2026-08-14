@@ -1,0 +1,27 @@
+# ──── Python / Backend ────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyc
+venv/
+.env
+*.log
+
+# ──── Database ────────────────────────────────────────────────────────────────
+# Commit the seeded DB so reviewers can run immediately without extra setup
+# backend/duolingo.db  ← keep tracked
+
+# ──── Node / Frontend ─────────────────────────────────────────────────────────
+node_modules/
+.next/
+out/
+build/
+.vercel/
+*.tsbuildinfo
+next-env.d.ts
+npm-debug.log*
+
+# ──── OS / Editor ─────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
