@@ -36,30 +36,6 @@ Open **`http://localhost:3000`**.
 
 ---
 
-## 🌐 Self-Hosting on a VPS (Ubuntu)
-
-```bash
-# 1. Install dependencies
-apt update && apt install -y git python3-pip nodejs npm nginx
-npm install -g pm2
-
-# 2. Clone repo
-git clone https://github.com/Gurbaksh363/duolingo-clo
-cd duolingo-clo/duolingo-app
-
-# 3. Start backend
-cd backend && pip3 install -r requirements.txt
-pm2 start "uvicorn main:app --host 0.0.0.0 --port 8000" --name backend
-
-# 4. Build & start frontend
-cd ../frontend && npm install && npm run build
-pm2 start "npm start" --name frontend
-
-# 5. Nginx config → proxy /  to :3000, /api to :8000
-```
-
----
-
 ## 🏗️ Project Structure
 
 ```
