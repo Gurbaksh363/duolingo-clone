@@ -1,0 +1,230 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  margin-left: 240px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.toast {
+  position: fixed;
+  top: 80px;
+  right: 24px;
+  background: white;
+  border-radius: 12px;
+  padding: 14px 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  font-weight: 800;
+  font-size: 15px;
+  z-index: 9999;
+  border-left: 4px solid #58CC02;
+  animation: slideIn 300ms ease;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.content {
+  padding: 32px 24px;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gemBalance {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #E6F7FF;
+  border: 2px solid #1CB0F6;
+  border-radius: 99px;
+  padding: 8px 16px;
+  font-weight: 900;
+  font-size: 16px;
+  color: #1CB0F6;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sectionTitle {
+  font-weight: 900;
+  font-size: 13px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #afafaf;
+}
+
+/* Item card */
+.itemCard {
+  background: white;
+  border: 2px solid #e5e5e5;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.itemLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.itemIcon { font-size: 36px; }
+
+.itemName {
+  font-weight: 900;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.itemDesc {
+  font-size: 13px;
+  color: #777;
+  font-weight: 600;
+}
+
+.heartsDisplay {
+  font-size: 16px;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.buyBtn {
+  padding: 12px 20px;
+  background: #58CC02;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-family: inherit;
+  font-weight: 900;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 3px 0 #45A800;
+  transition: all 150ms ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.buyBtn:hover { background: #89e219; }
+.buyBtn:active { transform: translateY(2px); box-shadow: none; }
+.buyBtn:disabled { background: #e5e5e5; color: #afafaf; box-shadow: 0 3px 0 #ccc; cursor: not-allowed; transform: none; }
+
+/* Gems grid */
+.gemsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.gemCard {
+  background: white;
+  border: 2px solid #e5e5e5;
+  border-radius: 14px;
+  padding: 20px 12px;
+  text-align: center;
+  transition: border-color 150ms ease;
+}
+.gemCard:hover { border-color: #1CB0F6; }
+
+.gemEmoji { font-size: 28px; margin-bottom: 8px; }
+
+.gemAmount {
+  font-weight: 900;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.gemBuyBtn {
+  width: 100%;
+  padding: 8px;
+  background: #1CB0F6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  font-weight: 900;
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: 0 3px 0 #0099D8;
+  transition: all 150ms ease;
+}
+.gemBuyBtn:hover { background: #84D8FF; }
+.gemBuyBtn:active { transform: translateY(2px); box-shadow: none; }
+
+/* Super card */
+.superCard {
+  background: linear-gradient(135deg, #FFC800, #FF9600);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.superLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: white;
+}
+
+.superTitle {
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+.superDesc {
+  font-size: 13px;
+  opacity: 0.9;
+  font-weight: 600;
+}
+
+.superBtn {
+  background: white;
+  color: #FF9600;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-family: inherit;
+  font-weight: 900;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: opacity 150ms ease;
+}
+.superBtn:hover { opacity: 0.9; }
+
+@media (max-width: 1024px) {
+  .main { margin-left: 0; }
+}
+
+@media (max-width: 640px) {
+  .gemsGrid { grid-template-columns: repeat(2, 1fr); }
+  .superCard { flex-direction: column; }
+}

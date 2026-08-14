@@ -1,0 +1,153 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  margin-left: 240px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  padding: 32px 24px;
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #777;
+  font-weight: 700;
+}
+
+/* League banner */
+.leagueBanner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  border-radius: 16px;
+  border: 2px solid;
+}
+
+.leagueEmoji { font-size: 48px; }
+
+.leagueName {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.leagueDesc {
+  font-size: 13px;
+  color: #777;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+/* List */
+.listCard {
+  background: white;
+  border: 2px solid #e5e5e5;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 150ms ease;
+}
+.row:last-child { border-bottom: none; }
+.row:hover { background: #f9f9f9; }
+
+.rowMe {
+  background: #F0FAFF;
+  border-left: 4px solid #1CB0F6;
+}
+
+.rank {
+  width: 32px;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 700;
+  color: #afafaf;
+  flex-shrink: 0;
+}
+
+.avatar img, .avatarDefault {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.avatarDefault {
+  background: linear-gradient(135deg, #58CC02, #89E219);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 900;
+  color: white;
+}
+
+.info {
+  flex: 1;
+}
+
+.name {
+  font-weight: 800;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.youBadge {
+  background: #1CB0F6;
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 99px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+
+.streak {
+  font-size: 13px;
+  color: #777;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.xp {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.xpVal {
+  font-weight: 900;
+  font-size: 16px;
+  color: #FFC800;
+}
+
+.xpLabel {
+  font-size: 11px;
+  color: #afafaf;
+  font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+  .main { margin-left: 0; }
+}

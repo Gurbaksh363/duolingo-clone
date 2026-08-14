@@ -1,0 +1,202 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  margin-left: 240px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  padding: 32px 24px;
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #777;
+  font-weight: 700;
+}
+
+/* Profile card */
+.profileCard {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: white;
+  border: 2px solid #e5e5e5;
+  border-radius: 20px;
+  padding: 28px;
+}
+
+.avatar img, .avatarDefault {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.avatarDefault {
+  background: linear-gradient(135deg, #58CC02, #89E219);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 900;
+  color: white;
+}
+
+.displayName {
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+.username {
+  color: #777;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.joinDate {
+  font-size: 13px;
+  color: #afafaf;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.leagueBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #FFF8E6;
+  border: 1.5px solid #FFC800;
+  border-radius: 99px;
+  padding: 4px 12px;
+  font-size: 13px;
+  font-weight: 800;
+  color: #FFC800;
+}
+
+/* Card */
+.card {
+  background: white;
+  border: 2px solid #e5e5e5;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.cardTitle {
+  font-weight: 900;
+  font-size: 13px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #afafaf;
+  margin-bottom: 14px;
+}
+
+/* Daily goal */
+.goalRow {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.goalPct {
+  color: #58CC02;
+  font-weight: 900;
+}
+
+.goalBarOuter {
+  height: 14px;
+  background: #e5e5e5;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.goalBarInner {
+  height: 100%;
+  background: #58CC02;
+  border-radius: 99px;
+  transition: width 600ms ease;
+}
+
+/* Stats grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.statTile {
+  background: white;
+  border: 2px solid #e5e5e5;
+  border-radius: 14px;
+  padding: 16px;
+  text-align: center;
+}
+
+.statTileIcon {
+  font-size: 28px;
+  margin-bottom: 4px;
+}
+
+.statTileValue {
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+.statTileLabel {
+  font-size: 11px;
+  color: #777;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+/* Achievements */
+.emptyAchievements {
+  color: #777;
+  text-align: center;
+  padding: 16px;
+  font-weight: 600;
+}
+
+.achievementGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.achievement {
+  background: #f7f7f7;
+  border-radius: 12px;
+  padding: 14px;
+  text-align: center;
+}
+
+.achievementIcon { font-size: 32px; margin-bottom: 6px; }
+.achievementName { font-weight: 900; font-size: 13px; margin-bottom: 4px; }
+.achievementDesc { font-size: 11px; color: #777; font-weight: 600; }
+
+@media (max-width: 1024px) {
+  .main { margin-left: 0; }
+}
+
+@media (max-width: 640px) {
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+  .profileCard { flex-direction: column; text-align: center; }
+}

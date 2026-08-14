@@ -1,0 +1,136 @@
+.sidebar {
+  width: 256px;
+  min-height: 100vh;
+  background: white;
+  border-right: 2px solid #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  gap: 8px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 16px 16px;
+  text-decoration: none;
+  margin-bottom: 12px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #777;
+  transition: all 150ms ease;
+  border: 2px solid transparent;
+}
+
+.navItem:hover {
+  background: #f7f7f7;
+}
+
+.navItem.active {
+  background: #ddf4ff;
+  color: #1cb0f6;
+  border-color: #84d8ff;
+}
+
+.navIcon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.navLabel {
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.userStats {
+  background: #f7f7f7;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.statRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* statIcon removed — now using Image component */
+
+.statValue {
+  font-weight: 900;
+  font-size: 16px;
+  color: #1f1f1f;
+}
+
+.statLabel {
+  font-size: 12px;
+  color: #777;
+  font-weight: 600;
+}
+
+.superPromo {
+  background: linear-gradient(135deg, #FFC800, #FF9600);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.superTitle {
+  font-weight: 900;
+  font-size: 16px;
+  color: #1f1f1f;
+  margin-bottom: 4px;
+}
+
+.superDesc {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 10px;
+}
+
+.superBtn {
+  background: white;
+  color: #FF9600;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 800;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: inherit;
+  opacity: 0.9;
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
+}

@@ -1,0 +1,116 @@
+.rightSidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-left: 2rem;
+}
+
+.desktopTopBar {
+  margin-bottom: 1rem;
+}
+
+.sideCard {
+  border: 2px solid #e5e5e5;
+  border-radius: 16px;
+  padding: 1rem 1.5rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.superImagesRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.superIllustration {
+  margin-top: -30px;
+  margin-right: -10px;
+}
+
+.superTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #4b4b4b;
+  margin-bottom: 0.5rem;
+}
+
+.superDesc {
+  font-size: 0.95rem;
+  color: #777;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.superBtn {
+  background: white;
+  color: #58cc02;
+  border: 2px solid #58cc02;
+  border-radius: 12px;
+  padding: 0.75rem;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s;
+}
+
+.superBtn:hover {
+  background: #f1fbe5;
+}
+
+.leagueHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #e5e5e5;
+  padding-bottom: 1rem;
+}
+
+.leagueTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #4b4b4b;
+}
+
+.leagueLink {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #1cb0f6;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.leagueLink:hover {
+  filter: brightness(1.1);
+}
+
+.leagueBody {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 0.5rem;
+}
+
+.leagueIconWrapper {
+  flex-shrink: 0;
+}
+
+.leagueRank {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #4b4b4b;
+  margin-bottom: 0.25rem;
+}
+
+.leagueRank span {
+  color: #58cc02;
+}
+
+.leagueCaption {
+  font-size: 0.9rem;
+  color: #777;
+}

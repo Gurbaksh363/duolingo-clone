@@ -1,0 +1,604 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.mainWrapper {
+  flex: 1;
+  margin-left: 256px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contentWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  padding-top: 24px;
+}
+
+.mainPath {
+  width: 600px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 80px;
+}
+
+.rightSidebarWrapper {
+  width: 368px;
+  flex-shrink: 0;
+}
+
+.desktopTopBar {
+  display: block;
+}
+.mobileTopBar {
+  display: none;
+}
+
+/* Loading skeleton */
+.loadingWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 40px 20px;
+  align-items: flex-start;
+}
+
+.skeletonCircle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+}
+
+/* Unit */
+.unit {
+  display: flex;
+  flex-direction: column;
+}
+
+.unitHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-radius: 16px;
+  margin: 24px 16px 8px;
+  color: white;
+}
+
+.unitHeaderLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.skillNode {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  z-index: 10;
+}
+
+.tooltipWrapper {
+  position: absolute;
+  top: 100%; /* Position right below the button */
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+  z-index: 50;
+}
+
+.floatingStart {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: -5px;
+  background: white;
+  border: 2px solid #e5e5e5;
+  border-radius: 12px;
+  min-width: 88px;
+  padding: 0 16px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 15px;
+  text-transform: uppercase;
+  z-index: 20;
+  animation: bounceStart 2s infinite ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  white-space: nowrap;
+}
+
+.floatingStart::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #e5e5e5;
+}
+
+.floatingStart::before {
+  content: "";
+  position: absolute;
+  top: calc(100% - 2.5px);
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid white;
+  z-index: 1;
+}
+
+@keyframes bounceStart {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -8px); }
+}
+
+.unitRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.unitBanner {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.unitHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  border-radius: 16px;
+  margin: 24px 16px 8px;
+  color: white;
+}
+
+.globalStickyHeader {
+  position: sticky;
+  top: 24px;
+  z-index: 150;
+  transition: background 0.3s ease;
+  overflow: hidden;
+}
+
+.headerGraphic {
+  position: absolute;
+  right: 180px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.sectionDivider {
+  display: flex;
+  align-items: center;
+  margin: 32px 16px 24px;
+  gap: 16px;
+}
+
+.dividerLine {
+  flex: 1;
+  border: none;
+  height: 2px;
+  background-color: #e5e5e5;
+}
+
+.dividerText {
+  color: #afafaf;
+  font-size: 17px;
+  font-weight: 800;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.chestNode {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  width: 72px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.chestNode:hover {
+  transform: scale(1.05);
+}
+
+.unitHeaderLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.unitHeaderLink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: white;
+  opacity: 0.95;
+}
+
+.backIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.unitLabel {
+  font-size: 14px;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.unitName {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.unitRight {
+  display: flex;
+  align-items: center;
+}
+
+.unitGuideBtn {
+  background: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  padding: 10px 16px;
+  color: white;
+  font-weight: 800;
+  font-size: 15px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15);
+  transition: background 0.2s, transform 0.1s, box-shadow 0.1s;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.unitGuideBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.unitGuideBtn:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.15);
+}
+
+.guideIcon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Skills path */
+.skillsPath {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 8px 0 16px;
+}
+
+.skillNode {
+  position: relative;
+  width: 72px;
+}
+
+/* Skill bubble */
+.bubbleWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.buttonWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skillBubble {
+  width: 70px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 150ms ease, filter 150ms ease;
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.2), 0 8px 0 var(--button-shadow-color, #e5e5e5);
+  flex-shrink: 0;
+}
+
+.skillBubble:not(.locked):hover {
+  transform: translateY(2px);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.2), 0 6px 0 var(--button-shadow-color, #e5e5e5);
+  filter: brightness(1.05);
+}
+
+.skillBubble:not(.locked):active {
+  transform: translateY(8px);
+  box-shadow: none;
+}
+
+.skillBubble.locked {
+  /* No special cursor needed */
+}
+
+.skillBubble.completed {
+}
+
+.skillBubble.completed {
+  background: #58CC02 !important;
+  border-color: #45A800 !important;
+}
+
+.bubbleIcon {
+  font-size: 28px;
+  z-index: 1;
+  position: relative;
+}
+
+.starIcon {
+  filter: brightness(0) invert(1);
+  z-index: 1;
+  position: relative;
+}
+
+.completedBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.completedCheck {
+  position: relative;
+  z-index: 1;
+}
+
+.shineOverlay {
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.20;
+}
+
+.progressRing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 96px;
+  height: 96px;
+  transform: translate(-50%, calc(-50% + 4px));
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bubbleLabel {
+  font-weight: 800;
+  font-size: 12px;
+  color: #777;
+  text-align: center;
+  white-space: nowrap;
+  max-width: 90px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.crowns {
+  font-size: 12px;
+  letter-spacing: -2px;
+}
+
+/* Right sidebar */
+.rightSidebar {
+  width: 280px;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sideCard {
+  background: white;
+  border: 2px solid #e5e5e5;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.sideCardTitle {
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #afafaf;
+  margin-bottom: 16px;
+}
+
+/* ─── Try Super Card ─── */
+.superImagesRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+.superIllustration {
+  margin-top: -16px;
+  margin-right: -8px;
+}
+.superTitle {
+  font-weight: 700;
+  font-size: 19px;
+  color: #4b4b4b;
+  margin-bottom: 8px;
+}
+.superDesc {
+  font-size: 15px;
+  color: #777;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+.superBtn {
+  background: white;
+  border: 2px solid #e5e5e5;
+  border-bottom-width: 4px;
+  border-radius: 12px;
+  color: #1cb0f6;
+  font-weight: 800;
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 12px 16px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 150ms;
+}
+.superBtn:hover {
+  background: #f7f7f7;
+}
+
+/* ─── Diamond League Card ─── */
+.leagueHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #e5e5e5;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+.leagueTitle {
+  font-weight: 700;
+  font-size: 19px;
+  color: #4b4b4b;
+}
+.leagueLink {
+  font-weight: 700;
+  font-size: 15px;
+  color: #1cb0f6;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.leagueLink:hover {
+  filter: brightness(0.9);
+}
+.leagueBody {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.leagueIconWrapper {
+  flex-shrink: 0;
+}
+.leagueRank {
+  font-size: 17px;
+  font-weight: 700;
+  color: #4b4b4b;
+  margin-bottom: 4px;
+}
+.leagueRank span {
+  color: #ff9600;
+}
+.leagueCaption {
+  font-size: 15px;
+  color: #777;
+}
+
+.goalInner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.goalXp {
+  font-weight: 900;
+  font-size: 14px;
+  color: #58CC02;
+}
+
+.goalOf {
+  font-size: 10px;
+  color: #777;
+  font-weight: 700;
+}
+
+.goalCaption {
+  text-align: center;
+  font-size: 13px;
+  color: #777;
+  font-weight: 600;
+}
+
+@media (max-width: 1280px) {
+  .rightSidebar {
+    display: none;
+  }
+  .desktopTopBar {
+    display: none;
+  }
+  .mobileTopBar {
+    display: block;
+  }
+}
+
+@media (max-width: 1024px) {
+  .mainWrapper {
+    margin-left: 0;
+  }
+  .rightSidebarWrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .contentWrapper {
+    padding-top: 0;
+  }
+  .mainPath {
+    width: 100%;
+  }
+
+  .unitHeader {
+    margin: 16px 8px 8px;
+  }
+}

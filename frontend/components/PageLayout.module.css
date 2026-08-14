@@ -1,0 +1,48 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.scrollArea {
+  flex: 1;
+  margin-left: 256px; /* Width of the Sidebar */
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  max-width: 1056px;
+  margin: 0 auto;
+  padding: 24px;
+  gap: 48px;
+}
+
+.mainContent {
+  flex: 1;
+  max-width: 600px;
+  width: 100%;
+}
+
+.rightSidebarWrapper {
+  width: 368px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .rightSidebarWrapper {
+    display: none;
+  }
+  .mainContainer {
+    padding: 24px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .scrollArea {
+    margin-left: 0;
+    margin-bottom: 80px; /* Space for mobile nav */
+  }
+}
